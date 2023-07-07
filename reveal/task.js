@@ -3,10 +3,12 @@ function showScroll() {
     reveals.forEach((element) => {
         const { top, bottom } = element.getBoundingClientRect();
         if (top > window.innerHeight || bottom < 0) {
-            if (element.className.includes('active')) element.className = 'reveal';
+            if (element.classList.contains('reveal_active')) {
+                element.classList.remove('reveal_active')
+            }
             return false;
         } 
-        element.className = 'reveal reveal_active';
+        element.classList.add('reveal_active')
       
     })
 }
