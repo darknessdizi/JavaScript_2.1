@@ -12,7 +12,7 @@ function replaceSpanActive(card) {
         nextElement = elementActive.nextElementSibling;
     } else {
         nextElement = rotatorArray[0];
-    };
+    }
     nextElement.classList.add('rotator__case_active');
     nextElement.setAttribute('style', `color: ${nextElement.dataset.color}`);
     delay = timer(nextElement);
